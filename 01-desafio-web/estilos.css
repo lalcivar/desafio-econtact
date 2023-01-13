@@ -1,0 +1,438 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*? REGLAS PARA EL TITULO */
+#titulo {
+  background-color: rgb(2, 84, 155);
+  color: aliceblue;
+  font-size: 120%;
+  padding: 15px 0;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  text-shadow: black 5px 0;
+}
+
+#titulo2 {
+  background-color: rgb(11, 168, 155);
+  padding: 15px 0;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#Parrafo1 {
+
+  color: aliceblue;
+  font-size: 120%;
+  padding: 15px 0;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+#Parrafo2 {
+
+  font-size: 60%;
+  padding: 15px 0;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#B1 {
+
+  font-weight: 100;
+}
+#B2 {
+
+  font-weight: 100;
+}
+
+#titulo3 {
+  background-color: rgb(0, 0, 0);
+  color: aliceblue;
+  font-size: 120%;
+  padding: 5px 0;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 15px;
+  font-weight: 100;
+  margin-top: 10%;
+  
+}
+
+#titulo4 {
+ 
+  color: rgb(2, 84, 155);
+  font-size: 120%;
+  padding: 5px 0;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 15px;
+  margin-top: 3%;
+  
+}
+
+#titulo5 {
+ 
+  color: rgb(143, 144, 145);
+  font-size: 80%;
+  padding: 5px 0;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 15px;
+  
+ 
+}
+
+
+
+#Parrafo3 {
+
+  font-size: 90%;
+  padding: 5px 0;
+  text-align:justify;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 3%;
+  line-height: 180%;
+  
+}
+
+#divisionL {
+  /** Indico que esta caja padre va a funcionar con las caracteristicas de flexbox (para manipular los primeros hijos) */
+ 
+
+  align-self: center;
+/** Indico que esta caja padre va a funcionar con las caracteristicas de flexbox (para manipular los primeros hijos) */
+display: flex;
+
+/** Establezco que los hijos se coloquen de manera horizontal en forma de fila */
+flex-direction: row;
+
+/** Establezco que, cuando ya no entren mas cajas en la primer fila, se vayan colocando en la fila siguiente (es decir, en una nueva fila) y asi no se salen del contenedor padre
+/** (probar tambien el valor "nowrap" en vez de "wrap" */
+flex-wrap: wrap;
+
+/** Distribucion de elementos en el eje X (probar tambien con "center", "space-around", "space-between" */
+justify-content: space-evenly;
+margin: 0 auto;
+
+ 
+
+ 
+} 
+
+#contenedor1 {
+  /** Indico que esta caja padre va a funcionar con las caracteristicas de flexbox (para manipular los primeros hijos) */
+  display: flex;
+
+  /** Establezco que los hijos se coloquen de manera horizontal en forma de fila */
+  flex-direction: row;
+
+  /** Establezco que, cuando ya no entren mas cajas en la primer fila, se vayan colocando en la fila siguiente (es decir, en una nueva fila) y asi no se salen del contenedor padre
+  /** (probar tambien el valor "nowrap" en vez de "wrap" */
+  flex-wrap: wrap;
+
+  /** Distribucion de elementos en el eje X (probar tambien con "center", "space-around", "space-between" */
+  justify-content: space-evenly;
+
+  /** Coloco un ancho y dejo centrada esta caja padre */
+  width: 80%;
+  margin: 0 auto;
+
+  /** Coloco un margin-top, un padding y un borde a esta caja padre */
+ 
+} 
+
+
+/*? REGLAS PARA LA CAJA PADRE */
+#contenedor2 {
+  /** Indico que esta caja padre va a funcionar con las caracteristicas de flexbox (para manipular los primeros hijos) */
+  display: flex;
+
+  /** Establezco que los hijos se coloquen de manera horizontal en forma de fila */
+  flex-direction: row;
+
+  /** Establezco que, cuando ya no entren mas cajas en la primer fila, se vayan colocando en la fila siguiente (es decir, en una nueva fila) y asi no se salen del contenedor padre
+  /** (probar tambien el valor "nowrap" en vez de "wrap" */
+  flex-wrap: wrap;
+
+  /** Distribucion de elementos en el eje X (probar tambien con "center", "space-around", "space-between" */
+  justify-content: center;
+
+  /** Coloco un ancho y dejo centrada esta caja padre */
+  width: 80%;
+  margin: 0 auto;
+
+  /** Coloco un margin-top, un padding y un borde a esta caja padre */
+  margin-top: 50px;
+  padding: 10px;
+
+
+  /** Coloco un "gap", es decir, una separacion entre cajas */
+  gap: 5px;
+}
+
+/*? REGLAS PARA LOS PRIMEROS HIJOS */
+#contenedor2 .seccion {
+  /** Establezco el "ancho" de las cajas con respecto al padre (esta propiedad se le puede aplicar a cada hijo en particular pero en este ejemplo las 4 cajas tendran un 20% */
+  flex-basis: 45%;
+
+  /** Coloco un borde, padding y centro el texto de cada caja */
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+#contenedor2 .seccion2 {
+  /** Cargo la imagen */
+  background-image: url("https://www.e-contact.cl/wp-content/uploads/2022/06/Recurso-34.png");
+
+  /** La dejo fija en el centro de esta caja */
+  background-position: center;
+
+  /** Evito que se repita la imagen (en caso de ser chica la imagen se va a repetir porque por defecto esta propiedad "background-repeat" se encuentra en "repeat" */
+  background-repeat: no-repeat;
+
+  /** Con el valor "cover" le digo que escale la imagen al mayor tamaño posible sin estirarla ni deformarla.
+  /** Si las proporciones de la imagen difieren de las de la caja, la imagen será recortada vertical u horizontalmente para que no quede un espacio vacío */
+  background-size :contain;
+  height: auto;
+  width: 150%;
+  /** Coloco un alto mínimo de esta caja */
+  min-height: 270px;
+}
+
+
+/*? REGLAS PARA LA CAJA PADRE */
+#contenedor3 {
+  /** Indico que esta caja padre va a funcionar con las caracteristicas de flexbox (para manipular los primeros hijos) */
+  display: flex;
+
+  /** Establezco que los hijos se coloquen de manera horizontal en forma de fila */
+  flex-direction: row;
+
+  /** Establezco que, cuando ya no entren mas cajas en la primer fila, se vayan colocando en la fila siguiente (es decir, en una nueva fila) y asi no se salen del contenedor padre
+  /** (probar tambien el valor "nowrap" en vez de "wrap" */
+  flex-wrap: wrap;
+
+  /** Distribucion de elementos en el eje X (probar tambien con "center", "space-around", "space-between" */
+  justify-content: center;
+
+  /** Coloco un ancho y dejo centrada esta caja padre */
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+
+  /** Coloco un margin-top, un padding y un borde a esta caja padre */
+  margin-top: 50px;
+  padding: 10px;
+
+
+  /** Coloco un "gap", es decir, una separacion entre cajas */
+  gap: 70px;
+}
+
+#contenedor3 .seccion {
+ 
+  /** La dejo fija en el centro de esta caja */
+  background-position: center;
+  height: 200px;
+  min-height: 100;
+  width: 300px;
+  border-radius: 15px;
+  background-color: rgb(2, 84, 155);
+  color: rgb(255, 255, 255);
+  font-size: 120%;
+  padding: 1%;
+}
+
+#contenedor3 .seccion .tituloBanclo {
+ 
+  color: rgb(255, 255, 255);
+  font-size: 70%;
+  padding: 0px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 15px;
+  margin-top: 10%;  
+
+ 
+}
+
+#contenedor3 .seccion .bt1 {
+ 
+  margin:5%;
+  padding: 10px;
+  background-color: rgb(255, 254, 253);
+  border-radius: 20px;  
+  border: 0px;
+  width: 80px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  color: rgb(2, 84, 155);
+  font-family: 'Times New Roman', Times, serif;
+  font-weight:bold;
+
+  
+}
+
+.bt1:hover {
+
+  box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+  outline-color: rgba(49, 138, 172, 0);
+  outline-offset: 80px;
+  text-shadow: 1px 1px 6px #fff;
+
+}
+
+
+
+
+
+/**/
+  /*? REGLAS PARA LA CAJA PADRE */
+  #contenedor100 {
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: rgb(11, 168, 155);
+
+  
+    /** Coloco un "gap", es decir, una separacion entre cajas */
+    gap: 20px;
+  }
+
+  
+  /*? REGLAS PARA LOS PRIMEROS HIJOS */
+  #contenedor100 .seccion {
+    /** Establezco el "ancho" de las cajas con respecto al padre (esta propiedad se le puede aplicar a cada hijo en particular pero en este ejemplo las 4 cajas tendran un 20% */
+    flex-basis: 30%;
+  
+    /** Coloco un borde, padding y centro el texto de cada caja */
+    border: 1px solid rgb(7, 22, 240);
+    padding: 5px;
+    text-align: center;
+  }
+  
+
+  
+  #contenedor101 {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+
+    margin-top: 12px;
+    padding: 10px;
+    background-color: rgb(11, 168, 155);
+    gap: 20px;
+  }
+  /*? REGLAS PARTICULARES PARA CADA CAJA */
+  #contenedor101 .seccion1 {
+    margin: 0 auto;
+    padding: 10px;
+    background-color: rgb(255, 254, 253);
+    border-radius: 12px;  
+    /* width: 35%;
+   min-width: 300px;*/
+
+  }
+  
+
+  #titulo100 {
+ 
+    color: rgb(246, 247, 248);
+    font-size: 150%;
+    padding: 3px 0;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 15px;
+    margin-top: 2%;
+    
+  }
+
+
+  #contenedor102 {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: rgb(17, 109, 214);
+    gap: 20px;
+  }
+  #contenedor102 .seccion1 {
+    /** Cargo la imagen */
+    background-image: url("https://www.e-contact.cl/wp-content/uploads/2021/01/Recurso-792.png");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size :contain;
+    height: auto;
+    width: 10%;
+    min-height: 200px;
+  }
+
+  .lista{
+    list-style-type:none;
+  }
+
+  .contacto{
+    color: rgb(251, 251, 252);
+    font-size: 200%;
+    padding: 5px 0;
+    text-align:center;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 3%;
+    line-height: 200%;
+
+  }
+
+  .linum{
+    color: rgb(251, 251, 252);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 125%;
+    padding: 2px 0;
+  }
+
+  #contenedor103 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: rgb(34, 216, 230);
+    gap: 20px;
+  }
+
+  #contenedor103 .seccion1 {
+    /** Cargo la imagen */
+    background-image: url("https://www.e-contact.cl/wp-content/uploads/2021/01/Recurso-792.png");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size :contain;
+    height:min-content;
+    width: 10%;
+    min-height: 50px;
+  }
+  
+  #titulonombre{
+    background-color: #ccc;
+    padding: 1px 0;
+    text-align: center;
+  }
+
+
+
